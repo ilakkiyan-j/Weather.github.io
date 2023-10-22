@@ -1,0 +1,93 @@
+/* Updated style.css */
+/* Updated style.css */
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url('Feedback-bg.jpg'); /* Set your background image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.5); /* Add a semi-transparent white background for the glass blur effect */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the header background */
+    color: #eceef4;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background to sections */
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 85%;
+    max-width: 800px;
+    margin: 1rem 0;
+}
+
+section h2 {
+    color: #768fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+input[type="date"],
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #768fff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #585858;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #768fff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #585858;
+}

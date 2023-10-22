@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Login.css" />
+    <script src="https://kit.fontawesome.com/1cf483120b.js" crossorigin="anonymous"></script>
+    <title>Login Form</title>
+    <link rel="icon" href="user.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="User name / Email">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password">
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text"><a href="Weather.html" class="link">Login Now</a></span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                <!-- Forgot Password Section -->
+                <div class="forgot-password">
+                   <p> <a href="#" class="link">Forgot Password?</a></p>
+                </div>
+                <!-- Register Section -->
+                <div class="register">
+                    <p>Don't have an account? <a href="Register.html" class="link" >Register</a></p>
+                </div>
+                <div class="social-login">
+                    <h3>Log in via</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const loginForm = document.querySelector('.login');
+          const userNameInput = document.querySelector('.login__input[type="text"]');
+          const passwordInput = document.querySelector('.login__input[type="password"]');
+          const loginButton = document.querySelector('.login__submit');
+      
+          loginButton.addEventListener('click', function (event) {
+            event.preventDefault();
+      
+            const userName = userNameInput.value;
+            const password = passwordInput.value;
+      
+            if (!userName || !password) {
+              alert('Please fill in both username and password fields.');
+            } else {
+              alert('Form submitted. Redirecting to Main page...');
+              window.location.href = 'Weather.html';
+            }
+          });
+        });
+      </script>
+      
+</body>
+
+</html>

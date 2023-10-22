@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Register.css"> 
+    <script src="https://kit.fontawesome.com/1cf483120b.js" crossorigin="anonymous"></script>
+    <title>Registration </title> 
+    <link rel="icon" href="Register.png" type="image/x-icon"> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="registration"> 
+                    <div class="registration__field"> 
+                        <i class="registration__icon fas fa-user"></i> 
+                        <input type="text" class="registration__input" placeholder="Username">
+                    </div>
+                    <div class="registration__field">
+                        <i class="registration__icon fas fa-envelope"></i> 
+                        <input type="email" class="registration__input" placeholder="Email">
+                    </div>
+                    <div class="registration__field">
+                        <i class="registration__icon fas fa-lock"></i>
+                        <input type="password" class="registration__input" placeholder="Password">
+                    </div>
+                    <div class="registration__field">
+                        <i class="registration__icon fas fa-lock"></i>
+                        <input type="password" class="registration__input" placeholder="Confirm Password">
+                    </div>
+                    <button class="button registration__submit"> 
+                       <span class="button__text"> <a href="Login.html" class="link">Register Now</a></span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                <div class="social-login">
+                    <h3>Register Via</h3> 
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const registrationForm = document.querySelector('.registration');
+          const usernameInput = document.querySelector('.registration__input[placeholder="Username"]');
+          const emailInput = document.querySelector('.registration__input[placeholder="Email"]');
+          const passwordInput = document.querySelector('.registration__input[placeholder="Password"]');
+          const confirmPasswordInput = document.querySelector('.registration__input[placeholder="Confirm Password"]');
+          const registrationButton = document.querySelector('.registration__submit');
+      
+          registrationButton.addEventListener('click', function (event) {
+            event.preventDefault();
+      
+            const username = usernameInput.value;
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+      
+            if (!username || !email || !password || !confirmPassword) {
+              alert('Please fill in all fields.');
+            } else if (password !== confirmPassword) {
+              alert('Passwords do not match. Please try again.');
+            } else {
+              alert('Registration successful. Redirecting to Login page...');
+              window.location.href = 'Login.html';
+            }
+          });
+        });
+      </script>
+      
+</body>
+</html>
